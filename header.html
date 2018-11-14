@@ -14,14 +14,13 @@
   }
 
   #header ul {
-	margin-top: 25px;
-    display: inline-block;
+	display: block;
     text-align: center;
     list-style-type: none;
-    margin: 0;
+	width: 70%;
+    margin: 0 auto;
     padding: 0;
-    margin-top: 25px;
-    transform: translateX(-95px);
+	padding-top: 25px;
   }
 
   #header ul li {
@@ -77,13 +76,16 @@
 	  margin-right: 20px;
 	  font-size: 50px;
 	  float: right;
+	  position: absolute;
+	  right: 0;
+	  top: 0;
   }
   
   .icon a {
   	color: #24253A;
   }
   
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 800px) {
 	  .icon {
 		  display: inline-block;
 	  }
@@ -92,18 +94,19 @@
 		  display: none;
 	  }
 	  
+	  #header.responsive #logo {
+		  margin-right: 100%;
+	  }
 	  #header.responsive ul {
 		  display: inline-block;
-		  margin-top: 75px;
+		  padding-top: 0;
 	  }
 	  #header.responsive ul li {
 		  display: block;
-		  margin-top: 10px;
+		  margin: 5px 0;
 	  }
 	  #header.responsive {
 		  height: auto;
-	      display: inline-flex;
-	      justify-content: space-between;
 	  }
   }
   </style>
