@@ -2,6 +2,7 @@
 <html>
 <head>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Code@IU</title>
 
 	<style>
@@ -12,9 +13,9 @@
     color: #24253A;
   }
 
-  ul {
+  #header ul {
+	margin-top: 25px;
     display: inline-block;
-    position: relative;
     text-align: center;
     list-style-type: none;
     margin: 0;
@@ -23,18 +24,18 @@
     transform: translateX(-95px);
   }
 
-  ul li {
+  #header ul li {
     display:inline-block;
     margin-right: 20px;
   }
 
-  ul li a {
+  #header ul li a {
     text-decoration: none;
     color: #24253A;
     font-size: 26px;
   }
 
-  ul li a:hover {
+  #header ul li a:hover {
     color: #DD0031;
   }
 
@@ -43,10 +44,10 @@
     position: relative;
     float: left;
     height: 100%;
-    top: 25%;
     font-size: 2.5em;
     font-weight: bold;
     margin-left: 20px;
+	margin-top: 15px;
   }
 
   #header {
@@ -56,6 +57,7 @@
     background-color: #FFF;
     border-bottom: 1px solid #24253A;
     box-shadow: 0 0 50px 0 rgba(0,0,0,0.5);
+	margin-bottom: 20px;
   }
 
   .black {
@@ -69,21 +71,70 @@
   a {
     text-decoration: none;
   }
+  
+  .icon {
+	  display: none;
+	  margin-right: 20px;
+	  font-size: 50px;
+	  float: right;
+  }
+  
+  .icon a {
+  	color: #24253A;
+  }
+  
+  @media screen and (max-width: 900px) {
+	  .icon {
+		  display: inline-block;
+	  }
+	  
+	  #header ul {
+		  display: none;
+	  }
+	  
+	  #header.responsive ul {
+		  display: inline-block;
+		  margin-top: 75px;
+	  }
+	  #header.responsive ul li {
+		  display: block;
+		  margin-top: 10px;
+	  }
+	  #header.responsive {
+		  height: auto;
+	      display: inline-flex;
+	      justify-content: space-between;
+	  }
+  }
   </style>
+
+<script>
+function expandIcon() {
+    var elem = document.getElementById("header");
+    if (elem.className === "") {
+        elem.className = "responsive";
+    }
+	else {
+        elem.className = "";
+    }
+}
+</script>
 
 </head>
 
 <body>
 
 	<div id="header">
-    <div id="logo"><a href="#"><span class="black">>Code</span><span class="red">@IU</span></a></div>
+    	<div id="logo"><a href="#"><span class="black">>Code</span><span class="red">@IU</span></a></div>
 
 		<ul>
-			<li><a href="#">Events</a></li>
-			<li><a href="#">Programs</a></li>
-			<li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
+			<li><a href="/?p=events">Events</a></li>
+			<li><a href="/?p=programs">Programs</a></li>
+			<li><a href="/?p=about">About</a></li>
+			<li><a href="/?p=contact">Contact</a></li>
 		</ul>
+		
+		<div class="icon"><a href="javascript:void(0);" onclick="expandIcon()"><i class="fa fa-bars"></i></a></div>
 	</div>
 </body>
 </html>

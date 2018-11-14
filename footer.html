@@ -7,8 +7,9 @@
   <title>Code@IU footer</title>
   <style>
   @import url("https://fonts.google.com/specimen/Roboto");
-  .footer {
+#footer {
   position: fixed;
+  height: 75px;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -16,16 +17,17 @@
   color: white;
   text-align: left;
   border-top: 2px solid #24253a;
+  box-shadow: 0 0 50px 0 rgba(0,0,0,0.5);
 }
 
-ul{
+#footer ul{
     list-style-type: none;
     display: flex;
     justify-content: center;
 
 }
 
-ul li a{
+#footer ul li a{
     text-decoration: none;
     color: #24253a;
     margin-left: 50px;
@@ -33,13 +35,13 @@ ul li a{
     font-size: 150%;
     font-family: Roboto;
 }
-ul li a:hover{
+#footer ul li a:hover{
     color: #dd0031;
 }
   </style>
 </head>
 <body>
-  <div class="footer">
+  <div id="footer">
   <ul>
     <li> <a href="#"> Slack </a> </li>
       <li> <a href="#"> Email </a> </li>
