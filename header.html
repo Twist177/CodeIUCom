@@ -13,6 +13,18 @@
     color: #24253A;
   }
 
+  body::before {
+	  content: " ";
+	  position: absolute;
+	  opacity: 0.2;
+	  width: 100%;
+	  height: 100%;
+	  background-image: url(assets/background.jpg);
+	  background-repeat: no-repeat;
+	  background-size: cover;
+	  z-index: -1;
+  }
+
   #header ul {
 	display: block;
     text-align: center;
@@ -70,7 +82,7 @@
   a {
     text-decoration: none;
   }
-  
+
   .icon {
 	  display: none;
 	  margin-right: 20px;
@@ -80,20 +92,20 @@
 	  right: 0;
 	  top: 0;
   }
-  
+
   .icon a {
   	color: #24253A;
   }
-  
+
   @media screen and (max-width: 800px) {
 	  .icon {
 		  display: inline-block;
 	  }
-	  
+
 	  #header ul {
 		  display: none;
 	  }
-	  
+
 	  #header.responsive #logo {
 		  margin-right: 100%;
 	  }
@@ -128,7 +140,7 @@ function expandIcon() {
 <body>
 
 	<div id="header">
-    	<div id="logo"><a href="#"><span class="black">>Code</span><span class="red">@IU</span></a></div>
+    	<div id="logo"><a href="."><span class="black">>Code</span><span class="red">@IU</span></a></div>
 
 		<ul>
 			<li><a href="/?p=events">Events</a></li>
@@ -136,7 +148,7 @@ function expandIcon() {
 			<li><a href="/?p=about">About</a></li>
 			<li><a href="/?p=contact">Contact</a></li>
 		</ul>
-		
+
 		<div class="icon"><a href="javascript:void(0);" onclick="expandIcon()"><i class="fa fa-bars"></i></a></div>
 	</div>
 </body>
